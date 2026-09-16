@@ -1,0 +1,1 @@
+CREATE INDEX idx_buckets_name ON buckets(name);
