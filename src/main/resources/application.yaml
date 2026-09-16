@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: SKube
+  active:
+    profile: dev
+  datasource:
+    url: jdbc:postgresql://localhost:5432/skube
+    username: postgres
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+  flyway:
+    enable: true
+    url: jdbc:postgresql://localhost:5432/skube
+    username: postgres
+    password: password
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+    baseline-version: 0
+    validate-on-migrate: true
+
