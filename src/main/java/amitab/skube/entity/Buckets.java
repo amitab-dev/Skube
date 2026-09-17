@@ -2,8 +2,10 @@ package amitab.skube.entity;
 
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -11,6 +13,8 @@ import java.time.Instant;
 import java.util.UUID;
 
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @Entity
@@ -28,7 +32,7 @@ public class Buckets {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "created_by", nullable = false)
-    private UUID createdBy;
+    private User createdBy;
 
     @Builder.Default
     @Column(name = "object_versioning", nullable = false)

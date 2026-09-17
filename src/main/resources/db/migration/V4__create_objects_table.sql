@@ -9,7 +9,7 @@ CREATE TABLE objects
 
 CREATE TABLE metadata
 (
-    id               BIGINT PRIMARY KEY   DEFAULT GENERATED ALWAYS AS IDENTITY,
+    id               BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     object_id        UUID        NOT NULL REFERENCES objects (id) ON DELETE CASCADE,
     etag             VARCHAR(64) NOT NULL,
     size_bytes       BIGINT      NOT NULL,

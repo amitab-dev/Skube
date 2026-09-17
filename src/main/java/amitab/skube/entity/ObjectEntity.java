@@ -7,8 +7,6 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.time.Instant;
 import java.util.UUID;
 
-@RequiredArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
 @Entity
