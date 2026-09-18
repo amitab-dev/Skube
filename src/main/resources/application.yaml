@@ -20,3 +20,8 @@ spring:
     baseline-on-migrate: true
     validate-on-migrate: true
 
+app:
+  jwt:
+    secret: ${JWT_SECRET:LXEgAPZGrj52xr8xqn5CJuCqXhBaWbpo66nv7Imw6Y1P51GNFcw437tHgi5TuVariEJ4HaxEqYQ/Q2PHl+B0FA==}
+    expiration: ${JWT_EXPIRATION:86400000}
+
